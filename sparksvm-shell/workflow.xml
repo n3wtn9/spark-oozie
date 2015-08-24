@@ -29,7 +29,7 @@
             <argument>--master</argument>
             <argument>yarn-cluster</argument>
             <argument>--files</argument>
-            <argument>${nameNode}/user/${user}/${examplesRoot}/apps/spark/testLabels#testLabels,${nameNode}/user/${user}/${examplesRoot}/apps/spark/testVector#testVector</argument>
+            <argument>testLabels,testVector</argument>
             <argument>spark-svm.jar</argument>
             <argument>-i</argument>
             <argument>testVector</argument>
@@ -39,8 +39,8 @@
             <argument>testLabels</argument>
             <argument>-n</argument>
             <argument>10</argument>
-            <!--file>${nameNode}/user/${user}/${examplesRoot}/apps/spark/testVector#testVector</file>
-            <file>${nameNode}/user/${user}/${examplesRoot}/apps/spark/testLabels#testLabels</file-->
+            <file>${nameNode}/user/${user}/${examplesRoot}/apps/spark/testVector#testVector</file>
+            <file>${nameNode}/user/${user}/${examplesRoot}/apps/spark/testLabels#testLabels</file>
             <file>${nameNode}/user/${user}/${examplesRoot}/apps/spark/lib/spark-svm.jar#spark-svm.jar</file>
         </shell>
         <ok to="end" />

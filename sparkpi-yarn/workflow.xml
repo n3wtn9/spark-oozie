@@ -20,17 +20,11 @@
         <spark xmlns="uri:oozie:spark-action:0.1">
             <job-tracker>${jobTracker}</job-tracker>
             <name-node>${nameNode}</name-node>
-            <configuration>
-              <property>
-                <name>hdp.version</name>
-                <value>2.3.0.0-2557</value>
-              </property>
-            </configuration>
             <master>${master}</master>
             <name>Spark-Pi</name>
             <class>org.apache.spark.examples.SparkPi</class>
             <jar>${nameNode}/user/${wf:user()}/${examplesRoot}/apps/spark/lib/spark-examples.jar</jar>
-	    <spark-opts>--deploy-mode cluster --driver-memory 513m --executor-memory 512m --executor-cores 1</spark-opts>
+	    <spark-opts>--driver-memory 513m --executor-memory 512m --executor-cores 1</spark-opts>
             <arg>10</arg>
         </spark>
         <ok to="end" />

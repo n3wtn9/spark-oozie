@@ -18,3 +18,9 @@ added to oozie-site.xml
 <property>
 <name>oozie.service.SparkConfigurationService.spark.configurations</name>
 <value>spark.yarn.historyServer.address=http://SPH-HOST:18088, spark.eventLog.dir=hdfs://NN:8020/user/spark/applicationHistory, spark.eventLog.enabled=true</value>
+
+# to use spark-yarn action in oozie with hdp
+remove the invalid classpath in /etc/hadoop/conf/mapred-site.xml
+under mapreduce.application.classpath
+:/usr/hdp/${hdp.version}/hadoop/lib/hadoop-lzo-0.6.0.${hdp.version}.jar
+ref: https://cwiki.apache.org/confluence/display/Hive/Hive+on+Spark%3A+Getting+Started
